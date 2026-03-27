@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 7% 95%;
+    --foreground: 210 25% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 25% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 25% 10%;
+    --primary: 210 53% 23%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 7% 93%;
+    --secondary-foreground: 210 53% 23%;
+    --muted: 40 7% 93%;
+    --muted-foreground: 40 3% 40%;
+    --accent: 210 64% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 7% 90%;
+    --input: 40 7% 90%;
+    --ring: 210 53% 23%;
+    --radius: 0.75rem;
+
+    --ai-accent: 255 36% 50%;
+    --ai-accent-foreground: 255 36% 20%;
+    --ai-bg: 252 67% 96%;
+    --success: 160 68% 37%;
+    --success-foreground: 100 50% 20%;
+    --warning: 36 85% 29%;
+    --warning-foreground: 36 85% 29%;
+
+    --niche-financiero-bg: 210 70% 94%;
+    --niche-financiero-fg: 210 76% 27%;
+    --niche-retail-bg: 36 80% 92%;
+    --niche-retail-fg: 28 90% 20%;
+    --niche-bpo-bg: 252 67% 96%;
+    --niche-bpo-fg: 248 40% 38%;
+    --niche-cobranza-bg: 15 78% 94%;
+    --niche-cobranza-fg: 15 70% 26%;
+    --niche-salud-bg: 90 44% 91%;
+    --niche-salud-fg: 100 75% 17%;
+    --niche-todos-bg: 40 7% 94%;
+    --niche-todos-fg: 40 3% 27%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
