@@ -214,14 +214,15 @@ Responde ÚNICAMENTE con JSON válido, sin texto adicional ni bloques markdown:
       }
 
       const resJson = await res.json();
-      const text = resJson.content[0].text;
+      const raw = resJson.content[0].text;
+      const text = raw.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '').trim();
 
       try {
         const parsed: ClaudeResponse = JSON.parse(text);
         setAnalysis(parsed);
       } catch {
         setAiError('Error parseando respuesta JSON de Claude.');
-        console.error('Raw Claude response:', text);
+        console.error('Raw Claude response:', raw);
       }
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : 'Error desconocido';

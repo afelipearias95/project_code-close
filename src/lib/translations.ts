@@ -3,7 +3,7 @@ export type Lang = 'es' | 'en';
 const translations = {
   es: {
     // NavBar
-    dashboard_title: 'Dashboard de inteligencia de campañas',
+    dashboard_title: 'DashBoard MasIAv',
     upload_report: 'Cargar reporte',
     quick_demo: 'Demo rápida',
     export: 'Exportar',
